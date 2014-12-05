@@ -11,6 +11,8 @@ install:
 # command to run tests
 script:
   - py.test --cov . --cov-report term-missing
+  - pep8 src/ --statistics --count
+  - pep8 tests/ --statistics --count
   - radon mi src/
   - radon mi test/
   - radon cc src/
@@ -19,8 +21,6 @@ script:
   - radon raw src/
 after_success:
   - coveralls
-  - pep8 --statistics --count src/
-  - pep8 --statistics --count test/
 notifications:
   emails:
     - errodate@alu.upo.es
