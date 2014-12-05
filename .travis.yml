@@ -16,7 +16,7 @@ script:
   - radon cc src/
   - radon cc test/
   - radon raw src/
-  - radon raw src/
+  - radon raw test/
 after_success:
   - coveralls
   - pep8 src/
