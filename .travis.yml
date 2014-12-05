@@ -22,5 +22,6 @@ after_success:
   - pep8 --statistics --count src/
   - pep8 --statistics --count test/
 notifications:
-  email:
+  emails:
     - errodate@alu.upo.es
+  on_failure: always
