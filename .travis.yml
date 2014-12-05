@@ -19,6 +19,8 @@ script:
   - radon raw src/
 after_success:
   - coveralls
+  - pep8 --statistics --count src/
+  - pep8 --statistics --count tests/
 notifications:
   email:
     - errodate@alu.upo.es
