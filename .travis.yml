@@ -11,13 +11,10 @@ install:
 # command to run tests
 script:
   - py.test --cov . --cov-report term-missing
-  - radon mi src/
-  - radon mi test/
-  - radon cc src/
-  - radon cc test/
-  - radon raw src/
-  - radon raw test/
 after_success:
+  - radon mi src/ , test/
+  - radon cc src/ , test/
+  - radon raw src/ , test/
   - coveralls
   - pep8 src/
   - pep8 tests/
