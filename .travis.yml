@@ -17,7 +17,7 @@ after_success:
   - radon raw src/ , test/
   - coveralls
   - pep8 src/
-  - pep8 tests/
+  - pep8 test/
 notifications:
   emails:
     - errodate@alu.upo.es
