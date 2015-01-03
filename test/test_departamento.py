@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Departamento import *
+from src.Departamento import *
 from mockito import *
 
 __author__ = 'ezequiel'
